@@ -2,8 +2,8 @@
 import { useState } from "react";
 import { FaCheck, FaLock } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-import { IoIosFlash } from "react-icons/io";
 import { IoFlash } from "react-icons/io5";
+import Link from "next/link";
 
 export default function Home() {
   const [url, setUrl] = useState("");
@@ -49,7 +49,7 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-[#0a0c10] text-gray-200 flex flex-col items-center justify-center px-6 py-16">
+    <main className="min-h-screen bg-[#0a0c10] text-gray-200 flex flex-col items-center justify-center px-4 py-16">
       <header className="text-center mb-12">
         <h1 className="text-5xl font-extrabold tracking-tight text-white">
           <span className="text-blue-500">Guard</span>Link
@@ -61,7 +61,7 @@ export default function Home() {
         </p>
       </header>
 
-      <div className="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-8 rounded-2xl border border-gray-800 shadow-2xl overflow-hidden">
+      <div className="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-y-8 rounded-2xl border border-gray-800 shadow-2xl overflow-hidden">
         <section className="p-4 md:p-8 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-gray-800">
           <div>
             <h2 className="text-3xl font-semibold text-white mb-4">
@@ -96,12 +96,12 @@ export default function Home() {
           </div>
 
           <div className="mt-10 border-t border-gray-800 pt-4 text-sm text-gray-500">
-            Built by
-            <a href="https://github.com/Trojan-Z3ro">
+            Built by{" "}
+            <Link target="_blank" href="https://github.com/Trojan-Z3ro">
               <span className="text-blue-400 font-medium">
                 Abdulsalaam Faheemdeen
               </span>
-            </a>
+            </Link>
           </div>
         </section>
         <section className="p-4 md:p-8 flex flex-col justify-center bg-[#0b0d12] ">
