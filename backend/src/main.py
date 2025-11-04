@@ -47,14 +47,12 @@ def predict_url(input_data: UserInput):
         vectorized_url = vector.transform([cleaned_url])
 
         prediction = model.predict(vectorized_url)[0]
-        print(prediction)
 
         label = (
             "This is a Phishing website !!"
             if prediction == "bad"
             else "This is healthy and good website !!"
         )
-        print(label)
 
         return {"url": url, "prediction": prediction, "message": label}
 
