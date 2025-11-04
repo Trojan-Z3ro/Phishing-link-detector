@@ -62,7 +62,7 @@ export default function Home() {
       </header>
 
       <div className="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-8 rounded-2xl border border-gray-800 shadow-2xl overflow-hidden">
-        <section className="p-10 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-gray-800">
+        <section className="p-4 md:p-8 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-gray-800">
           <div>
             <h2 className="text-3xl font-semibold text-white mb-4">
               Stay Ahead of Cyber Threats
@@ -104,8 +104,7 @@ export default function Home() {
             </a>
           </div>
         </section>
-
-        <section className="p-10 flex flex-col justify-center bg-[#0b0d12]">
+        <section className="p-4 md:p-8 flex flex-col justify-center bg-[#0b0d12] ">
           <div className="max-w-md w-full mx-auto">
             <h3 className="text-2xl font-semibold text-white mb-3">
               Phishing URL Scanner
