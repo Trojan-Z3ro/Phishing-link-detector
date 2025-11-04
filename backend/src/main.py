@@ -14,7 +14,10 @@ app = FastAPI(title="Phishing URL Detection", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=[
+        "http://localhost:3000",
+        "https://phishing-link-detector-peach.vercel.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -25,8 +28,8 @@ class UserInput(BaseModel):
     url: str
 
 
-vector = pickle.load(open("backend/src/ml_model/vectorizer.pkl", "rb"))
-model = pickle.load(open("backend/src/ml_model/phishing.pkl", "rb"))
+vector = pickle.load(open("src/ml_model/vectorizer.pkl", "rb"))
+model = pickle.load(open("src/ml_model/phishing.pkl", "rb"))
 
 
 @app.get("/")
